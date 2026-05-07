@@ -2,7 +2,7 @@
 
 A vendored copy of [`ps_mem.py`](https://www.pixelbeat.org/scripts/ps_mem.py) by Pádraig Brady, the `ps_mem.py` utility serves as a standardized, on-host incident response tool for diagnosing severe memory pressure (OOM events) across PHP-FPM, Apache, and MySQL workloads on EC2 instances. 
 
-Unlike standard `top` or `ps` utilities that heavily inflate apparent memory usage by double-counting shared libraries (RSS), this tool calculates the **Proportional Set Size (PSS)**. By accurately dividing shared memory across all active worker processes, it provides the precise, real-world memory footprint required to properly calculate and tune `pm.max_children` limits in PHP-FPM.
+Unlike standard `top` or `ps` utilities that heavily inflate apparent memory usage by double-counting shared libraries (RSS), this tool calculates the **Proportional Set Size (PSS)**. By accurately dividing shared memory across all active worker processes, it provides the precise memory required to properly calculate and tune `pm.max_children` limits in PHP-FPM.
 
 *Source: [Pixelbeat ps_mem](https://www.pixelbeat.org/scripts/ps_mem.py) | License: LGPLv2*
 
